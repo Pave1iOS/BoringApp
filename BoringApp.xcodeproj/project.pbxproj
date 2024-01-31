@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		46ADDEC72B693C9D008678C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDEC62B693C9D008678C0 /* AppDelegate.swift */; };
 		46ADDEC92B693C9D008678C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDEC82B693C9D008678C0 /* SceneDelegate.swift */; };
-		46ADDECB2B693C9D008678C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDECA2B693C9D008678C0 /* ViewController.swift */; };
 		46ADDECE2B693C9D008678C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46ADDECC2B693C9D008678C0 /* Main.storyboard */; };
 		46ADDED02B693C9F008678C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46ADDECF2B693C9F008678C0 /* Assets.xcassets */; };
 		46ADDED32B693C9F008678C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46ADDED12B693C9F008678C0 /* LaunchScreen.storyboard */; };
+		46ADDEDE2B693E1F008678C0 /* Boring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDEDD2B693E1F008678C0 /* Boring.swift */; };
+		46ADDEE12B693E6E008678C0 /* BoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDEE02B693E6E008678C0 /* BoringViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		46ADDEC32B693C9D008678C0 /* BoringApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoringApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46ADDEC62B693C9D008678C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46ADDEC82B693C9D008678C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		46ADDECA2B693C9D008678C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		46ADDECD2B693C9D008678C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46ADDECF2B693C9F008678C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46ADDED22B693C9F008678C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46ADDED42B693C9F008678C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46ADDEDD2B693E1F008678C0 /* Boring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boring.swift; sourceTree = "<group>"; };
+		46ADDEE02B693E6E008678C0 /* BoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		46ADDEC52B693C9D008678C0 /* BoringApp */ = {
 			isa = PBXGroup;
 			children = (
-				46ADDEC62B693C9D008678C0 /* AppDelegate.swift */,
-				46ADDEC82B693C9D008678C0 /* SceneDelegate.swift */,
-				46ADDECA2B693C9D008678C0 /* ViewController.swift */,
-				46ADDECC2B693C9D008678C0 /* Main.storyboard */,
+				46ADDEDA2B693D73008678C0 /* ViewControllers */,
+				46ADDEDF2B693E24008678C0 /* Models */,
+				46ADDEDB2B693D8A008678C0 /* Storyboards */,
 				46ADDECF2B693C9F008678C0 /* Assets.xcassets */,
-				46ADDED12B693C9F008678C0 /* LaunchScreen.storyboard */,
-				46ADDED42B693C9F008678C0 /* Info.plist */,
+				46ADDEDC2B693D99008678C0 /* App */,
 			);
 			path = BoringApp;
+			sourceTree = "<group>";
+		};
+		46ADDEDA2B693D73008678C0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				46ADDEE02B693E6E008678C0 /* BoringViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		46ADDEDB2B693D8A008678C0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				46ADDECC2B693C9D008678C0 /* Main.storyboard */,
+				46ADDED12B693C9F008678C0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		46ADDEDC2B693D99008678C0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				46ADDEC62B693C9D008678C0 /* AppDelegate.swift */,
+				46ADDEC82B693C9D008678C0 /* SceneDelegate.swift */,
+				46ADDED42B693C9F008678C0 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		46ADDEDF2B693E24008678C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				46ADDEDD2B693E1F008678C0 /* Boring.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46ADDECB2B693C9D008678C0 /* ViewController.swift in Sources */,
+				46ADDEDE2B693E1F008678C0 /* Boring.swift in Sources */,
 				46ADDEC72B693C9D008678C0 /* AppDelegate.swift in Sources */,
 				46ADDEC92B693C9D008678C0 /* SceneDelegate.swift in Sources */,
+				46ADDEE12B693E6E008678C0 /* BoringViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +330,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F4DM4RJXGM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BoringApp/Info.plist;
+				INFOPLIST_FILE = BoringApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +343,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = PavelGribachev.BoringApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,12 +361,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F4DM4RJXGM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BoringApp/Info.plist;
+				INFOPLIST_FILE = BoringApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +374,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = PavelGribachev.BoringApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
