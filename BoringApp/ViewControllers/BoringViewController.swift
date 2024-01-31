@@ -23,10 +23,11 @@ private extension BoringViewController {
             }
             
             do {
-                let decoder = try JSONDecoder().decode(Boring.self, from: data)
+                let borning = try JSONDecoder().decode(Boring.self, from: data)
                 
-                print("DATA - \(decoder)")
-                print("RESPONSE - \(response)")
+                print("DATA - \(data)\n")
+                print("BORNING - \(borning)\n")
+                print("RESPONSE - \(response)\n")
                 
             } catch {
                 print(error.localizedDescription)

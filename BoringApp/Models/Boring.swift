@@ -5,8 +5,6 @@
 //  Created by Pavel Gribachev on 30.01.2024.
 //
 
-import Foundation
-
 struct Boring: Decodable {
     let activity: String
     let type: String
