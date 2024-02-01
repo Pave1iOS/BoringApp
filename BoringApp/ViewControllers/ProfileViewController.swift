@@ -15,24 +15,17 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         settingsTableView.dataSource = self
-        settingsTableView.delegate = self
+        settingsTableView.rowHeight = 85
         
     }
 
 }
 
+// MARK: ProfileViewControllerDataSource
 extension ProfileViewController: UITableViewDataSource {
-    
-    
-    
-}
-
-extension ProfileViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "colorCell", for: indexPath) as? ColorTableViewCell
-        
-        
         
         return cell ?? UITableViewCell()
     }
@@ -40,10 +33,4 @@ extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        85
-    }
-    
-    
 }

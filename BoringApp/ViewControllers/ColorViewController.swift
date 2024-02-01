@@ -8,22 +8,27 @@
 import UIKit
 
 class ColorViewController: UIViewController {
-
+    
+    @IBOutlet weak var colorCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        colorCollectionView.dataSource = self
+        
+    }
+}
+
+extension ColorViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let item = collectionView.dequeueReusableCell(withReuseIdentifier: "colorItem", for: indexPath)
+        
+        return item
     }
-    */
-
+    
+    
 }
