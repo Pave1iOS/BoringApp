@@ -19,7 +19,7 @@
 		46ADDF162B6C0459008678C0 /* ArchitectsDaughter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46ADDF152B6C0459008678C0 /* ArchitectsDaughter-Regular.ttf */; };
 		46ADDF182B6C1EB3008678C0 /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF172B6C1EB3008678C0 /* ColorTableViewCell.swift */; };
 		46ADDF1B2B6C1FB9008678C0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF1A2B6C1FB9008678C0 /* ProfileViewController.swift */; };
-		46ADDF1D2B6C308C008678C0 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF1C2B6C308C008678C0 /* ColorViewController.swift */; };
+		46ADDF1D2B6C308C008678C0 /* ColorCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF1C2B6C308C008678C0 /* ColorCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		46ADDF152B6C0459008678C0 /* ArchitectsDaughter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArchitectsDaughter-Regular.ttf"; path = "../../../../../Downloads/Architects_Daughter/ArchitectsDaughter-Regular.ttf"; sourceTree = "<group>"; };
 		46ADDF172B6C1EB3008678C0 /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		46ADDF1A2B6C1FB9008678C0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		46ADDF1C2B6C308C008678C0 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		46ADDF1C2B6C308C008678C0 /* ColorCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 			children = (
 				46ADDEE02B693E6E008678C0 /* BoringViewController.swift */,
 				46ADDF1A2B6C1FB9008678C0 /* ProfileViewController.swift */,
-				46ADDF1C2B6C308C008678C0 /* ColorViewController.swift */,
+				46ADDF1C2B6C308C008678C0 /* ColorCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			files = (
 				46ADDEDE2B693E1F008678C0 /* Boring.swift in Sources */,
 				46ADDEC72B693C9D008678C0 /* AppDelegate.swift in Sources */,
-				46ADDF1D2B6C308C008678C0 /* ColorViewController.swift in Sources */,
+				46ADDF1D2B6C308C008678C0 /* ColorCollectionViewController.swift in Sources */,
 				46ADDF0D2B6BD4F0008678C0 /* NetworkManager.swift in Sources */,
 				46ADDEC92B693C9D008678C0 /* SceneDelegate.swift in Sources */,
 				46ADDF1B2B6C1FB9008678C0 /* ProfileViewController.swift in Sources */,
