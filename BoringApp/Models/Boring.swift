@@ -9,8 +9,13 @@ struct Boring: Decodable {
     let activity: String
     let type: String
     let participants: Int
-    let price: Double
-    let link: String
-    let key: String
     let accessibility: Double
+    
+    var description: String {
+        """
+        type: \(type)
+        participants: \(participants)
+        accessibility: \(String(format: "%.02f", accessibility))
+        """
+    }
 }

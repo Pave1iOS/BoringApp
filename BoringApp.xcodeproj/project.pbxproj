@@ -15,6 +15,10 @@
 		46ADDEDE2B693E1F008678C0 /* Boring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDEDD2B693E1F008678C0 /* Boring.swift */; };
 		46ADDEE12B693E6E008678C0 /* BoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDEE02B693E6E008678C0 /* BoringViewController.swift */; };
 		46ADDF0D2B6BD4F0008678C0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF0C2B6BD4F0008678C0 /* NetworkManager.swift */; };
+		46ADDF142B6C01BD008678C0 /* Pangolin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46ADDF122B6BFBE1008678C0 /* Pangolin-Regular.ttf */; };
+		46ADDF162B6C0459008678C0 /* ArchitectsDaughter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46ADDF152B6C0459008678C0 /* ArchitectsDaughter-Regular.ttf */; };
+		46ADDF182B6C1EB3008678C0 /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF172B6C1EB3008678C0 /* ColorTableViewCell.swift */; };
+		46ADDF1B2B6C1FB9008678C0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF1A2B6C1FB9008678C0 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		46ADDEDD2B693E1F008678C0 /* Boring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boring.swift; sourceTree = "<group>"; };
 		46ADDEE02B693E6E008678C0 /* BoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringViewController.swift; sourceTree = "<group>"; };
 		46ADDF0C2B6BD4F0008678C0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		46ADDF122B6BFBE1008678C0 /* Pangolin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pangolin-Regular.ttf"; sourceTree = "<group>"; };
+		46ADDF152B6C0459008678C0 /* ArchitectsDaughter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArchitectsDaughter-Regular.ttf"; path = "../../../../../Downloads/Architects_Daughter/ArchitectsDaughter-Regular.ttf"; sourceTree = "<group>"; };
+		46ADDF172B6C1EB3008678C0 /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
+		46ADDF1A2B6C1FB9008678C0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +72,9 @@
 				46ADDEDF2B693E24008678C0 /* Models */,
 				46ADDF0E2B6BD4FD008678C0 /* Services */,
 				46ADDEDB2B693D8A008678C0 /* Storyboards */,
+				46ADDF192B6C1EBF008678C0 /* Views */,
 				46ADDECF2B693C9F008678C0 /* Assets.xcassets */,
+				46ADDF112B6BFBE1008678C0 /* Fonts */,
 				46ADDEDC2B693D99008678C0 /* App */,
 			);
 			path = BoringApp;
@@ -74,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				46ADDEE02B693E6E008678C0 /* BoringViewController.swift */,
+				46ADDF1A2B6C1FB9008678C0 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -111,6 +122,23 @@
 				46ADDF0C2B6BD4F0008678C0 /* NetworkManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		46ADDF112B6BFBE1008678C0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				46ADDF152B6C0459008678C0 /* ArchitectsDaughter-Regular.ttf */,
+				46ADDF122B6BFBE1008678C0 /* Pangolin-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		46ADDF192B6C1EBF008678C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46ADDF172B6C1EB3008678C0 /* ColorTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +199,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46ADDF142B6C01BD008678C0 /* Pangolin-Regular.ttf in Resources */,
+				46ADDF162B6C0459008678C0 /* ArchitectsDaughter-Regular.ttf in Resources */,
 				46ADDED32B693C9F008678C0 /* LaunchScreen.storyboard in Resources */,
 				46ADDED02B693C9F008678C0 /* Assets.xcassets in Resources */,
 				46ADDECE2B693C9D008678C0 /* Main.storyboard in Resources */,
@@ -188,7 +218,9 @@
 				46ADDEC72B693C9D008678C0 /* AppDelegate.swift in Sources */,
 				46ADDF0D2B6BD4F0008678C0 /* NetworkManager.swift in Sources */,
 				46ADDEC92B693C9D008678C0 /* SceneDelegate.swift in Sources */,
+				46ADDF1B2B6C1FB9008678C0 /* ProfileViewController.swift in Sources */,
 				46ADDEE12B693E6E008678C0 /* BoringViewController.swift in Sources */,
+				46ADDF182B6C1EB3008678C0 /* ColorTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
