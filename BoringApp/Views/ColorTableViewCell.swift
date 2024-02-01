@@ -9,6 +9,8 @@ import UIKit
 
 class ColorTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var ColorImageView: UIImageView!
     
 
 }

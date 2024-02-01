@@ -11,8 +11,8 @@ final class BoringViewController: UIViewController {
     
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet var activityIndicators: [UIActivityIndicatorView]!
     
     
     
@@ -45,7 +45,7 @@ private extension BoringViewController {
             guard let self else { return }
             switch result {
             case .success(let boring):
-                activityIndicator.stopAnimating()
+                activityIndicators.forEach { $0.stopAnimating() }
                 print(boring)
                 activityLabel.text = boring.activity.uppercased()
                 descriptionLabel.text = boring.description.lowercased()
