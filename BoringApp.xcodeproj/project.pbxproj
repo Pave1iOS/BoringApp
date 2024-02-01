@@ -14,6 +14,7 @@
 		46ADDED32B693C9F008678C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46ADDED12B693C9F008678C0 /* LaunchScreen.storyboard */; };
 		46ADDEDE2B693E1F008678C0 /* Boring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDEDD2B693E1F008678C0 /* Boring.swift */; };
 		46ADDEE12B693E6E008678C0 /* BoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDEE02B693E6E008678C0 /* BoringViewController.swift */; };
+		46ADDF0D2B6BD4F0008678C0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF0C2B6BD4F0008678C0 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		46ADDED42B693C9F008678C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46ADDEDD2B693E1F008678C0 /* Boring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boring.swift; sourceTree = "<group>"; };
 		46ADDEE02B693E6E008678C0 /* BoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringViewController.swift; sourceTree = "<group>"; };
+		46ADDF0C2B6BD4F0008678C0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				46ADDEDA2B693D73008678C0 /* ViewControllers */,
 				46ADDEDF2B693E24008678C0 /* Models */,
+				46ADDF0E2B6BD4FD008678C0 /* Services */,
 				46ADDEDB2B693D8A008678C0 /* Storyboards */,
 				46ADDECF2B693C9F008678C0 /* Assets.xcassets */,
 				46ADDEDC2B693D99008678C0 /* App */,
@@ -100,6 +103,14 @@
 				46ADDEDD2B693E1F008678C0 /* Boring.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		46ADDF0E2B6BD4FD008678C0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				46ADDF0C2B6BD4F0008678C0 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 			files = (
 				46ADDEDE2B693E1F008678C0 /* Boring.swift in Sources */,
 				46ADDEC72B693C9D008678C0 /* AppDelegate.swift in Sources */,
+				46ADDF0D2B6BD4F0008678C0 /* NetworkManager.swift in Sources */,
 				46ADDEC92B693C9D008678C0 /* SceneDelegate.swift in Sources */,
 				46ADDEE12B693E6E008678C0 /* BoringViewController.swift in Sources */,
 			);
