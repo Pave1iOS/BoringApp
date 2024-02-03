@@ -17,6 +17,7 @@ final class BoringViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet weak var activityLabel: UILabel!
     
+    @IBOutlet weak var activityView: SpringView!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var selectedTypeLabel: UIImageView! {
         didSet {
@@ -51,6 +52,12 @@ final class BoringViewController: UIViewController {
         fetchBoring()
     }
     
+    @IBAction func activityViewDidTapped() {
+        activityView.animation = "morph"
+        activityView.curve = "easeInCubic"
+        activityView.animate()
+    }
+    
     @IBAction func descriptionTranscriptDidTapped() {
         animateIn(view: descriptionTranscriptView)
         descriptionTranscriptButton.isHidden.toggle()
@@ -60,6 +67,7 @@ final class BoringViewController: UIViewController {
         animateOut(view: descriptionTranscriptView)
     }
     
+    // MARK: Prepare func
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let typeVC = segue.destination as? TypeViewController
         

@@ -26,7 +26,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgraund" translatesAutoresizingMaskIntoConstraints="NO" id="Mk4-in-rSg">
                                 <rect key="frame" x="16" y="60" width="361" height="758"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWT-V3-vhn" userLabel="activityView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWT-V3-vhn" userLabel="activityView" customClass="SpringView" customModule="SpringAnimation">
                                 <rect key="frame" x="40" y="159" width="313" height="150"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DTview" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-L9-V5q">
@@ -41,6 +41,15 @@
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vyt-Pw-ENi">
                                         <rect key="frame" x="146.66666666666666" y="65" width="20" height="20"/>
                                     </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKm-Yx-gXG">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="150"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="activityViewDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mhz-QR-hlb"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -49,12 +58,16 @@
                                     <constraint firstItem="nwp-L9-V5q" firstAttribute="leading" secondItem="tWT-V3-vhn" secondAttribute="leading" id="RH8-Ma-Aj1"/>
                                     <constraint firstItem="c0N-LO-LLn" firstAttribute="leading" secondItem="tWT-V3-vhn" secondAttribute="leading" constant="15" id="VYU-2T-M69"/>
                                     <constraint firstItem="nwp-L9-V5q" firstAttribute="top" secondItem="tWT-V3-vhn" secondAttribute="top" id="WyI-kx-jqw"/>
+                                    <constraint firstAttribute="trailing" secondItem="RKm-Yx-gXG" secondAttribute="trailing" id="XaN-Bm-SIt"/>
                                     <constraint firstItem="c0N-LO-LLn" firstAttribute="top" secondItem="tWT-V3-vhn" secondAttribute="top" constant="15" id="b11-dh-ahL"/>
                                     <constraint firstAttribute="bottom" secondItem="c0N-LO-LLn" secondAttribute="bottom" constant="15" id="cgH-3W-KKL"/>
                                     <constraint firstItem="vyt-Pw-ENi" firstAttribute="centerY" secondItem="tWT-V3-vhn" secondAttribute="centerY" id="jKJ-sc-uGj"/>
+                                    <constraint firstAttribute="bottom" secondItem="RKm-Yx-gXG" secondAttribute="bottom" id="q2U-hB-WMA"/>
                                     <constraint firstItem="vyt-Pw-ENi" firstAttribute="centerX" secondItem="tWT-V3-vhn" secondAttribute="centerX" id="rv2-On-kQt"/>
                                     <constraint firstAttribute="height" constant="150" id="vVr-Ii-yI6"/>
+                                    <constraint firstItem="RKm-Yx-gXG" firstAttribute="top" secondItem="tWT-V3-vhn" secondAttribute="top" id="vjP-dY-9nh"/>
                                     <constraint firstAttribute="trailing" secondItem="c0N-LO-LLn" secondAttribute="trailing" constant="15" id="y9p-UE-aNG"/>
+                                    <constraint firstItem="RKm-Yx-gXG" firstAttribute="leading" secondItem="tWT-V3-vhn" secondAttribute="leading" id="zI4-DC-f0j"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ZN-47-Eye" userLabel="typeView">
@@ -254,6 +267,7 @@
                     </view>
                     <connections>
                         <outlet property="activityLabel" destination="c0N-LO-LLn" id="wM8-Lf-XyY"/>
+                        <outlet property="activityView" destination="tWT-V3-vhn" id="Cg1-Ri-J8f"/>
                         <outlet property="descriptionLabel" destination="xCh-Xf-Hht" id="1xV-Te-LnS"/>
                         <outlet property="descriptionTranscriptButton" destination="POz-rH-3BF" id="oXe-Dn-QPM"/>
                         <outlet property="descriptionTranscriptLabel" destination="JkP-VX-XzD" id="27m-5Y-RFg"/>
@@ -306,7 +320,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkP-VX-XzD">
                             <rect key="frame" x="10" y="34" width="247" height="98"/>
                             <fontDescription key="fontDescription" name="ArchitectsDaughter-Regular" family="Architects Daughter" pointSize="12"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGO-iL-t9P" userLabel="ok">
