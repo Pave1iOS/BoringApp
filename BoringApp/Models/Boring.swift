@@ -51,7 +51,8 @@ struct Boring: Decodable {
         """
         participants: the number of people you need to complete the task
         
-        accessibility: how difficult will it be to complete the task
+        accessibility: how difficult will it be to complete the task.
+        where 0.0 is easy and 1.00 is hard
         """
     }
 }
