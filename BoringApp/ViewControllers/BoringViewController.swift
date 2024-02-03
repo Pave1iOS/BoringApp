@@ -16,8 +16,8 @@ final class BoringViewController: UIViewController {
     
     // MARK: IBOutlets
     @IBOutlet weak var activityLabel: UILabel!
-    
     @IBOutlet weak var activityView: SpringView!
+    
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var selectedTypeLabel: UIImageView! {
         didSet {
@@ -37,6 +37,8 @@ final class BoringViewController: UIViewController {
 
     @IBOutlet var activityIndicators: [UIActivityIndicatorView]!
     
+    @IBOutlet weak var nextButtonView: SpringView!
+    
     // MARK: Properties
     private let networkManager = NetworkManager.shared
     private var type = "allTypes"
@@ -49,6 +51,11 @@ final class BoringViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func nextActivityDidTapped() {
+        
+        nextButtonView.animation = "pop"
+        nextButtonView.curve = "easeOutCubic"
+        nextButtonView.animate()
+        
         fetchBoring()
     }
     
@@ -59,12 +66,16 @@ final class BoringViewController: UIViewController {
     }
     
     @IBAction func descriptionTranscriptDidTapped() {
-        animateIn(view: descriptionTranscriptView)
+        descriptionTranscriptView.animation = "squeezeDown"
+        descriptionTranscriptView.animate()
+
+        view.addSubview(descriptionTranscriptView)
         descriptionTranscriptButton.isHidden.toggle()
     }
     
     @IBAction func descriptionTranscriptViewCloseTapped() {
-        animateOut(view: descriptionTranscriptView)
+        descriptionTranscriptView.animation = "fadeOut"
+        descriptionTranscriptView.animate()
     }
     
     // MARK: Prepare func
@@ -72,21 +83,6 @@ final class BoringViewController: UIViewController {
         let typeVC = segue.destination as? TypeViewController
         
         typeVC?.delegate = self
-    }
-}
-
-// MARK: Animation func
-private extension BoringViewController {
-    func animateIn(view: SpringView) {
-        view.animation = "squeezeDown"
-        view.animate()
-        
-        self.view.addSubview(view)
-    }
-    
-    func animateOut(view: SpringView) {
-        descriptionTranscriptView.animation = "fadeOut"
-        descriptionTranscriptView.animate()
     }
 }
 
