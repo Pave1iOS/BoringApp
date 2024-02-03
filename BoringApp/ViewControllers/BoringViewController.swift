@@ -15,6 +15,7 @@ final class BoringViewController: UIViewController {
     
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet var activityIndicators: [UIActivityIndicatorView]!
     
@@ -69,6 +70,7 @@ private extension BoringViewController {
                     activityIndicators.forEach { $0.stopAnimating() }
                     activityLabel.text = boring.activity.uppercased()
                     typeLabel.text = "type: \(boring.type.lowercased())"
+                    descriptionLabel.text = boring.description
                     print("DATA - \(boring)")
                 case .failure(let failure):
                     print(failure)
@@ -88,6 +90,7 @@ private extension BoringViewController {
                     activityIndicators.forEach { $0.stopAnimating() }
                     activityLabel.text = boring.activity.uppercased()
                     typeLabel.text = "type: \(boring.type.lowercased())"
+                    descriptionLabel.text = boring.description
                     print("DATA - \(boring)")
                 case .failure(let failure):
                     print(failure)
