@@ -77,24 +77,27 @@ private extension BoringViewController {
                 }
             }
         } else {
-            
-            networkManager.fetch(
-                Boring.self,
-                from: URL(
-                    string: Link.activityTypeURL.url + type
-                )!
-            ) { [weak self] result in
-                guard let self else { return }
-                switch result {
-                case .success(let boring):
-                    activityIndicators.forEach { $0.stopAnimating() }
-                    activityLabel.text = boring.activity.uppercased()
-                    typeLabel.text = "type: \(boring.type.lowercased())"
-                    descriptionLabel.text = boring.description
-                    print("DATA - \(boring)")
-                case .failure(let failure):
-                    print(failure)
-                }
+            fetchSpecificType()
+        }
+    }
+    
+    func fetchSpecificType() {
+        networkManager.fetch(
+            Boring.self,
+            from: URL(
+                string: Link.activityTypeURL.url + type
+            )!
+        ) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let boring):
+                activityIndicators.forEach { $0.stopAnimating() }
+                activityLabel.text = boring.activity.uppercased()
+                typeLabel.text = "type: \(boring.type.lowercased())"
+                descriptionLabel.text = boring.description
+                print("DATA - \(boring)")
+            case .failure(let failure):
+                print(failure)
             }
         }
     }

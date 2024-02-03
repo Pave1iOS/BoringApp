@@ -59,7 +59,7 @@
                                     <constraint firstAttribute="trailing" secondItem="c0N-LO-LLn" secondAttribute="trailing" constant="15" id="y9p-UE-aNG"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ZN-47-Eye" userLabel="descriptionView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ZN-47-Eye" userLabel="typeView">
                                 <rect key="frame" x="40" y="290" width="240" height="44"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frameAct" translatesAutoresizingMaskIntoConstraints="NO" id="ZFi-sK-yc3">
@@ -165,7 +165,7 @@
                                     <constraint firstItem="SUo-Bx-IrU" firstAttribute="top" secondItem="v7Q-Qj-Yhj" secondAttribute="top" id="yKy-YO-9QX"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdz-gN-UB5">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdz-gN-UB5" userLabel="descriptionView">
                                 <rect key="frame" x="40" y="354" width="240" height="110"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frameAct" translatesAutoresizingMaskIntoConstraints="NO" id="X0N-e9-e2P">

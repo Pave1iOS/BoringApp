@@ -43,7 +43,7 @@ struct Boring: Decodable {
     var description: String {
         """
         participants: \(participants)
-        accessibility: \(String(format: "%.02f", accessibility))
+        accessibility: \(accessibility)
         """
     }
 }
