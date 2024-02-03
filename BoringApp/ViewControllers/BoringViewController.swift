@@ -51,14 +51,6 @@ final class BoringViewController: UIViewController {
         fetchBoring()
     }
     
-    @IBAction func profileDidTapped() {
-        
-    }
-    
-    @IBAction func changeTypeDidTapped() {
-       
-    }
-    
     @IBAction func descriptionTranscriptDidTapped() {
         animateIn(view: descriptionTranscriptView)
         descriptionTranscriptButton.isHidden.toggle()
