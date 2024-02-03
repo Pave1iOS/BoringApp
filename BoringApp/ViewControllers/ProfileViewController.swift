@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
 
     @IBOutlet weak var settingsTableView: UITableView!
     
@@ -25,8 +25,8 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "colorCell", for: indexPath) as? ColorTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "colorCell", for: indexPath) as? CustomTableViewCell
+        cell?.customLabel.text = "Change color"
         return cell ?? UITableViewCell()
     }
     

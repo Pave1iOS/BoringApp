@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ColorCollectionViewController: UICollectionViewController {
+final class ColorCollectionViewController: UICollectionViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
