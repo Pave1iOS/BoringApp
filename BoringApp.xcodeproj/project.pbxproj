@@ -22,6 +22,7 @@
 		46ADDF1D2B6C308C008678C0 /* ColorCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF1C2B6C308C008678C0 /* ColorCollectionViewController.swift */; };
 		46ADDF1F2B6D8409008678C0 /* TypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF1E2B6D8409008678C0 /* TypeViewController.swift */; };
 		46ADDF222B6E5DEB008678C0 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 46ADDF212B6E5DEB008678C0 /* SpringAnimation */; };
+		46ADDF262B6E70F2008678C0 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF252B6E70F2008678C0 /* CustomCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		46ADDF1A2B6C1FB9008678C0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		46ADDF1C2B6C308C008678C0 /* ColorCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewController.swift; sourceTree = "<group>"; };
 		46ADDF1E2B6D8409008678C0 /* TypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeViewController.swift; sourceTree = "<group>"; };
+		46ADDF252B6E70F2008678C0 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,8 @@
 				46ADDEDA2B693D73008678C0 /* ViewControllers */,
 				46ADDEDF2B693E24008678C0 /* Models */,
 				46ADDF0E2B6BD4FD008678C0 /* Services */,
-				46ADDEDB2B693D8A008678C0 /* Storyboards */,
 				46ADDF192B6C1EBF008678C0 /* Views */,
+				46ADDEDB2B693D8A008678C0 /* Storyboards */,
 				46ADDECF2B693C9F008678C0 /* Assets.xcassets */,
 				46ADDF112B6BFBE1008678C0 /* Fonts */,
 				46ADDEDC2B693D99008678C0 /* App */,
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				46ADDF172B6C1EB3008678C0 /* CustomTableViewCell.swift */,
+				46ADDF252B6E70F2008678C0 /* CustomCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46ADDEDE2B693E1F008678C0 /* Boring.swift in Sources */,
+				46ADDF262B6E70F2008678C0 /* CustomCollectionViewCell.swift in Sources */,
 				46ADDEC72B693C9D008678C0 /* AppDelegate.swift in Sources */,
 				46ADDF1D2B6C308C008678C0 /* ColorCollectionViewController.swift in Sources */,
 				46ADDF1F2B6D8409008678C0 /* TypeViewController.swift in Sources */,

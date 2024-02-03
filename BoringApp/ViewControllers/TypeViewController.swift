@@ -26,7 +26,6 @@ final class TypeViewController: UIViewController {
 // MARK: TypeViewControllerDelegate
 extension TypeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let indexPath = activityTypeTableView.indexPathForSelectedRow else { return }
         delegate.backType(activityTypes[indexPath.row].rawValue)
         dismiss(animated: true)
     }

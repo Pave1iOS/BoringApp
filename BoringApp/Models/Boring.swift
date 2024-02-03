@@ -34,6 +34,17 @@ enum TypeActivity: String, CaseIterable {
     case busywork = "busywork"
 }
 
+enum ColorCollectionView: String, CaseIterable {
+    case blue = "blue"
+    case green = "green"
+    case mate = "mate"
+    case orange = "orange"
+    case purple = "purple"
+    case red = "red"
+    case white = "white"
+    case yellow = "yellow"
+}
+
 struct Boring: Decodable {
     let activity: String
     let type: String
