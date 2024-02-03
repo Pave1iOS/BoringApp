@@ -46,4 +46,12 @@ struct Boring: Decodable {
         accessibility: \(accessibility)
         """
     }
+    
+    var descriptionTranscript: String {
+        """
+        participants: the number of people you need to complete the task
+        
+        accessibility: how difficult will it be to complete the task
+        """
+    }
 }

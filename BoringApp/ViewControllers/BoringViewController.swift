@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SpringAnimation
 
 protocol TypeViewControllerDelegate: AnyObject {
     func backType(_ type: String)
@@ -13,6 +14,7 @@ protocol TypeViewControllerDelegate: AnyObject {
 
 final class BoringViewController: UIViewController {
     
+    // MARK: IBOutlets
     @IBOutlet weak var activityLabel: UILabel!
     
     @IBOutlet weak var typeLabel: UILabel!
@@ -25,21 +27,20 @@ final class BoringViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var descriptionTranscriptButton: UIView!
-    @IBOutlet weak var descriptionTranscriptView: UIView! {
+    @IBOutlet weak var descriptionTranscriptView: SpringView! {
         didSet {
             descriptionTranscriptView.center = view.center
         }
     }
     @IBOutlet weak var descriptionTranscriptLabel: UILabel!
-    
-    
-    
-    
+
     @IBOutlet var activityIndicators: [UIActivityIndicatorView]!
     
+    // MARK: Properties
     private let networkManager = NetworkManager.shared
     private var type = "allTypes"
     
+    // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchBoring()
@@ -59,16 +60,33 @@ final class BoringViewController: UIViewController {
     }
     
     @IBAction func descriptionTranscriptDidTapped() {
-        
-        view.addSubview(descriptionTranscriptView)
-        
+        animateIn(view: descriptionTranscriptView)
         descriptionTranscriptButton.isHidden.toggle()
+    }
+    
+    @IBAction func descriptionTranscriptViewCloseTapped() {
+        animateOut(view: descriptionTranscriptView)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let typeVC = segue.destination as? TypeViewController
         
         typeVC?.delegate = self
+    }
+}
+
+// MARK: Animation func
+private extension BoringViewController {
+    func animateIn(view: SpringView) {
+        view.animation = "squeezeDown"
+        view.animate()
+        
+        self.view.addSubview(view)
+    }
+    
+    func animateOut(view: SpringView) {
+        descriptionTranscriptView.animation = "fadeOut"
+        descriptionTranscriptView.animate()
     }
 }
 
@@ -100,6 +118,7 @@ private extension BoringViewController {
                     typeLabel.text = "type: \(boring.type.lowercased())"
                     descriptionLabel.text = boring.description
                     selectedTypeLabel.isHidden = true
+                    descriptionTranscriptLabel.text = boring.descriptionTranscript
                     print("DATA - \(boring)")
                 case .failure(let failure):
                     print(failure)
