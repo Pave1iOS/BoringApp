@@ -24,6 +24,8 @@ final class BoringViewController: UIViewController {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var descriptionTranscriptView: UIView!
+    
     @IBOutlet var activityIndicators: [UIActivityIndicatorView]!
     
     private let networkManager = NetworkManager.shared
@@ -34,6 +36,7 @@ final class BoringViewController: UIViewController {
         fetchBoring()
     }
     
+    // MARK: IBActions
     @IBAction func nextActivityDidTapped() {
         fetchBoring()
     }
@@ -46,6 +49,11 @@ final class BoringViewController: UIViewController {
        
     }
     
+    @IBAction func descriptionTranscriptDidTapped() {
+        
+        descriptionTranscriptView.isHidden.toggle()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let typeVC = segue.destination as? TypeViewController
         
@@ -53,6 +61,7 @@ final class BoringViewController: UIViewController {
     }
 }
 
+// MARK: TypeViewControllerDelegate
 extension BoringViewController: TypeViewControllerDelegate {
     func backType(_ type: String) {
         self.type = type
@@ -60,6 +69,7 @@ extension BoringViewController: TypeViewControllerDelegate {
     }
 }
 
+// MARK: Fetch func
 private extension BoringViewController {
     func fetchBoring() {
         
