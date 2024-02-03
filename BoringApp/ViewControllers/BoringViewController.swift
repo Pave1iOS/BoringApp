@@ -14,7 +14,14 @@ protocol TypeViewControllerDelegate: AnyObject {
 final class BoringViewController: UIViewController {
     
     @IBOutlet weak var activityLabel: UILabel!
+    
     @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var selectedTypeLabel: UIImageView! {
+        didSet {
+            selectedTypeLabel.isHidden = true
+        }
+    }
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet var activityIndicators: [UIActivityIndicatorView]!
@@ -36,7 +43,7 @@ final class BoringViewController: UIViewController {
     }
     
     @IBAction func changeTypeDidTapped() {
-        
+       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,6 +78,7 @@ private extension BoringViewController {
                     activityLabel.text = boring.activity.uppercased()
                     typeLabel.text = "type: \(boring.type.lowercased())"
                     descriptionLabel.text = boring.description
+                    selectedTypeLabel.isHidden = true
                     print("DATA - \(boring)")
                 case .failure(let failure):
                     print(failure)
@@ -95,6 +103,7 @@ private extension BoringViewController {
                 activityLabel.text = boring.activity.uppercased()
                 typeLabel.text = "type: \(boring.type.lowercased())"
                 descriptionLabel.text = boring.description
+                selectedTypeLabel.isHidden = false
                 print("DATA - \(boring)")
             case .failure(let failure):
                 print(failure)
