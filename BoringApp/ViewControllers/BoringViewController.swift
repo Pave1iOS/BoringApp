@@ -24,7 +24,16 @@ final class BoringViewController: UIViewController {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    @IBOutlet weak var descriptionTranscriptView: UIView!
+    @IBOutlet weak var descriptionTranscriptButton: UIView!
+    @IBOutlet weak var descriptionTranscriptView: UIView! {
+        didSet {
+            descriptionTranscriptView.center = view.center
+        }
+    }
+    @IBOutlet weak var descriptionTranscriptLabel: UILabel!
+    
+    
+    
     
     @IBOutlet var activityIndicators: [UIActivityIndicatorView]!
     
@@ -51,7 +60,9 @@ final class BoringViewController: UIViewController {
     
     @IBAction func descriptionTranscriptDidTapped() {
         
-        descriptionTranscriptView.isHidden.toggle()
+        view.addSubview(descriptionTranscriptView)
+        
+        descriptionTranscriptButton.isHidden.toggle()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

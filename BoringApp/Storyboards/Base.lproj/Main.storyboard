@@ -31,7 +31,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWT-V3-vhn" userLabel="activityView">
                                 <rect key="frame" x="40" y="120" width="240" height="150"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frameAct" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-L9-V5q">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DTview" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-L9-V5q">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="150"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-LO-LLn">
@@ -62,7 +62,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ZN-47-Eye" userLabel="typeView">
                                 <rect key="frame" x="40" y="290" width="240" height="44"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frameAct" translatesAutoresizingMaskIntoConstraints="NO" id="ZFi-sK-yc3">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DTview" translatesAutoresizingMaskIntoConstraints="NO" id="ZFi-sK-yc3">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfr-aB-lqr">
@@ -177,6 +177,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdz-gN-UB5" userLabel="descriptionView">
                                 <rect key="frame" x="40" y="354" width="240" height="110"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DTview" translatesAutoresizingMaskIntoConstraints="NO" id="X0N-e9-e2P">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="110"/>
+                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POz-rH-3BF" userLabel="?">
                                         <rect key="frame" x="200" y="10" width="30" height="30"/>
                                         <subviews>
@@ -207,9 +210,6 @@
                                             <constraint firstAttribute="bottom" secondItem="W5e-e2-Hyl" secondAttribute="bottom" id="sut-qL-nEp"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frameAct" translatesAutoresizingMaskIntoConstraints="NO" id="X0N-e9-e2P">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="110"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCh-Xf-Hht">
                                         <rect key="frame" x="15" y="10" width="210" height="90"/>
                                         <fontDescription key="fontDescription" name="ArchitectsDaughter-Regular" family="Architects Daughter" pointSize="17"/>
@@ -262,7 +262,9 @@
                     <connections>
                         <outlet property="activityLabel" destination="c0N-LO-LLn" id="wM8-Lf-XyY"/>
                         <outlet property="descriptionLabel" destination="xCh-Xf-Hht" id="1xV-Te-LnS"/>
-                        <outlet property="descriptionTranscriptView" destination="POz-rH-3BF" id="oXe-Dn-QPM"/>
+                        <outlet property="descriptionTranscriptButton" destination="POz-rH-3BF" id="oXe-Dn-QPM"/>
+                        <outlet property="descriptionTranscriptLabel" destination="JkP-VX-XzD" id="27m-5Y-RFg"/>
+                        <outlet property="descriptionTranscriptView" destination="rLb-Ix-JkB" id="Xz0-ly-dVf"/>
                         <outlet property="selectedTypeLabel" destination="nuH-zz-9Lf" id="u66-h5-45Z"/>
                         <outlet property="typeLabel" destination="rfr-aB-lqr" id="aca-bH-QRu"/>
                         <outletCollection property="activityIndicators" destination="ykv-T4-znW" collectionClass="NSMutableArray" id="8HB-DW-7vE"/>
@@ -272,14 +274,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="rLb-Ix-JkB">
-                    <rect key="frame" x="0.0" y="0.0" width="267" height="167"/>
+                    <rect key="frame" x="0.0" y="0.0" width="267" height="216"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DTview" translatesAutoresizingMaskIntoConstraints="NO" id="kBe-XL-sxd">
-                            <rect key="frame" x="0.0" y="0.0" width="267" height="167"/>
+                            <rect key="frame" x="0.0" y="0.0" width="267" height="216"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTT-VT-ivo" userLabel="ok">
-                            <rect key="frame" x="103.5" y="122" width="60" height="25"/>
+                            <rect key="frame" x="103.5" y="171" width="60" height="25"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DTokBtn" translatesAutoresizingMaskIntoConstraints="NO" id="PPc-iu-Cbd">
                                     <rect key="frame" x="0.0" y="0.0" width="60" height="25"/>
@@ -306,7 +308,7 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkP-VX-XzD">
-                            <rect key="frame" x="10" y="34" width="247" height="83"/>
+                            <rect key="frame" x="10" y="34" width="247" height="132"/>
                             <fontDescription key="fontDescription" name="ArchitectsDaughter-Regular" family="Architects Daughter" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -571,7 +573,6 @@
         <image name="backgraund" width="519" height="518"/>
         <image name="cellBG" width="512" height="512"/>
         <image name="charWhat" width="196" height="299"/>
-        <image name="frameAct" width="262" height="260"/>
         <image name="hideBar" width="287" height="41"/>
         <image name="nextAcr" width="303" height="84"/>
         <image name="selectedType" width="125" height="72"/>
