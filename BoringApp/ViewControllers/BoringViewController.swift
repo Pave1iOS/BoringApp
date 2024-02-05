@@ -63,6 +63,8 @@ final class BoringViewController: UIViewController {
         activityView.animation = "morph"
         activityView.curve = "easeInCubic"
         activityView.animate()
+        
+        UIPasteboard.general.string = activityLabel.text
     }
     
     @IBAction func descriptionTranscriptDidTapped() {
