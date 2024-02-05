@@ -25,6 +25,11 @@ final class BoringViewController: UIViewController {
         }
     }
     
+    @IBOutlet var copiedView: UIView! {
+        didSet {
+            copiedView.isHidden = true
+        }
+    }
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var descriptionTranscriptButton: UIView!
@@ -65,6 +70,8 @@ final class BoringViewController: UIViewController {
         activityView.animate()
         
         UIPasteboard.general.string = activityLabel.text
+        
+        copiedView.isHidden.toggle()
     }
     
     @IBAction func descriptionTranscriptDidTapped() {
@@ -110,12 +117,7 @@ private extension BoringViewController {
                 guard let self else { return }
                 switch result {
                 case .success(let boring):
-                    activityIndicators.forEach { $0.stopAnimating() }
-                    activityLabel.text = boring.activity.uppercased()
-                    typeLabel.text = "type: \(boring.type.lowercased())"
-                    descriptionLabel.text = boring.description
-                    selectedTypeLabel.isHidden = true
-                    descriptionTranscriptLabel.text = boring.descriptionTranscript
+                    randomActivityPreset(boring)
                     print("DATA - \(boring)")
                 case .failure(let failure):
                     print(failure)
@@ -135,16 +137,34 @@ private extension BoringViewController {
             guard let self else { return }
             switch result {
             case .success(let boring):
-                activityIndicators.forEach { $0.stopAnimating() }
-                activityLabel.text = boring.activity.uppercased()
-                typeLabel.text = "type: \(boring.type.lowercased())"
-                descriptionLabel.text = boring.description
-                selectedTypeLabel.isHidden = false
+                specificTypePreset(boring)
                 print("DATA - \(boring)")
             case .failure(let failure):
                 print(failure)
             }
         }
+    }
+}
+
+// MARK: Preset views
+private extension BoringViewController {
+    func randomActivityPreset(_ boring: Boring) {
+        activityIndicators.forEach { $0.stopAnimating() }
+        activityLabel.text = boring.activity.uppercased()
+        typeLabel.text = "type: \(boring.type.lowercased())"
+        descriptionLabel.text = boring.description
+        descriptionTranscriptLabel.text = boring.descriptionTranscript
+        selectedTypeLabel.isHidden = true
+        copiedView.isHidden = true
+    }
+    
+    func specificTypePreset(_ boring: Boring) {
+        activityIndicators.forEach { $0.stopAnimating() }
+        activityLabel.text = boring.activity.uppercased()
+        typeLabel.text = "type: \(boring.type.lowercased())"
+        descriptionLabel.text = boring.description
+        selectedTypeLabel.isHidden = false
+        copiedView.isHidden = true
     }
 }
 
