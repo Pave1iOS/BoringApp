@@ -18,10 +18,9 @@ struct NetworkManager {
     
     private init() {}
     
-    func fetch<T: Decodable>(
-        _ type: T.Type,
+    func fetchBoring(
         from url: URL,
-        completion: @escaping(Result<T, NetworkError>) -> Void
+        completion: @escaping(Result<Boring, NetworkError>) -> Void
     ) {
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data else {
@@ -30,7 +29,7 @@ struct NetworkManager {
             }
             
             do {
-                let boring = try JSONDecoder().decode(T.self, from: data)
+                let boring = try JSONDecoder().decode(Boring.self, from: data)
                 
                 DispatchQueue.main.async {
                     completion(.success(boring))

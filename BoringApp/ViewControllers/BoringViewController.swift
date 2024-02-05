@@ -46,7 +46,7 @@ final class BoringViewController: UIViewController {
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchBoring()
+        fetchRandomActivity()
     }
     
     // MARK: IBActions
@@ -56,7 +56,7 @@ final class BoringViewController: UIViewController {
         nextButtonView.curve = "easeOutCubic"
         nextButtonView.animate()
         
-        fetchBoring()
+        fetchRandomActivity()
     }
     
     @IBAction func activityViewDidTapped() {
@@ -90,18 +90,17 @@ final class BoringViewController: UIViewController {
 extension BoringViewController: TypeViewControllerDelegate {
     func backType(_ type: String) {
         self.type = type
-        fetchBoring()
+        fetchRandomActivity()
     }
 }
 
 // MARK: Fetch func
 private extension BoringViewController {
-    func fetchBoring() {
+    func fetchRandomActivity() {
         
         if TypeActivity.allTypes.rawValue == type {
             
-            networkManager.fetch(
-                Boring.self,
+            networkManager.fetchBoring(
                 from: URL(
                     string: Link.boredURL.url
                 )!
@@ -126,8 +125,7 @@ private extension BoringViewController {
     }
     
     func fetchSpecificType() {
-        networkManager.fetch(
-            Boring.self,
+        networkManager.fetchBoring(
             from: URL(
                 string: Link.activityTypeURL.url + type
             )!
