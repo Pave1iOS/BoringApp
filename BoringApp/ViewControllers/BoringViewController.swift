@@ -18,6 +18,12 @@ final class BoringViewController: UIViewController {
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var activityView: SpringView!
     
+    @IBOutlet var copiedView: UIView! {
+        didSet {
+            copiedView.isHidden = true
+        }
+    }
+    
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var selectedTypeLabel: UIImageView! {
         didSet {
@@ -25,11 +31,6 @@ final class BoringViewController: UIViewController {
         }
     }
     
-    @IBOutlet var copiedView: UIView! {
-        didSet {
-            copiedView.isHidden = true
-        }
-    }
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var descriptionTranscriptButton: UIView!
@@ -108,7 +109,6 @@ private extension BoringViewController {
     func fetchRandomActivity() {
         
         if TypeActivity.allTypes.rawValue == type {
-            
             networkManager.fetchBoring(
                 from: URL(
                     string: Link.boredURL.url
