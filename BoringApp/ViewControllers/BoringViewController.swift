@@ -94,7 +94,7 @@ private extension BoringViewController {
 // MARK: TypeViewControllerDelegate
 extension BoringViewController: TypeViewControllerDelegate {
     func set(background: UIColor) {
-        <#code#>
+        background.setFill()
     }
     
     func backType(_ type: String) {
