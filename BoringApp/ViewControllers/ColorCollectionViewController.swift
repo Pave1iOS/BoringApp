@@ -11,6 +11,7 @@ final class ColorCollectionViewController: UICollectionViewController {
     
     let colors = ColorCollectionView.allCases
     var bgColor: UIColor!
+    
         
     override func viewDidLoad() {
         super.viewDidLoad()
