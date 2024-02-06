@@ -7,8 +7,15 @@
 
 import Foundation
 
-enum BackgraundColors: String {
+enum BackgraundColors: String, CaseIterable {
+    case blue = "blue"
+    case green = "green"
+    case mate = "mate"
+    case orange = "orange"
+    case purple = "purple"
     case red = "red"
+    case white = "white"
+    case yellow = "yellow"
 }
 
 enum Link {
