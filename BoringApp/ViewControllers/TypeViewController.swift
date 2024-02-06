@@ -17,6 +17,7 @@ final class TypeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         activityTypeTableView.dataSource = self
         activityTypeTableView.delegate = self
         activityTypeTableView.rowHeight = 85
