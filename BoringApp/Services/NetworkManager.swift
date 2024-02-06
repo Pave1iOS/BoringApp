@@ -19,11 +19,10 @@ struct NetworkManager {
     ) {
         AF.request(url)
             .validate()
-            .responseJSON { dataResponse in
+            .responseDecodable(of: Boring.self) { dataResponse in
                 switch dataResponse.result {
                 case .success(let value):
-                    let boring = Boring.getBoring(from: value)
-                    completion(.success(boring))
+                    completion(.success(value))
                 case .failure(let error):
                     completion(.failure(error))
                 }
