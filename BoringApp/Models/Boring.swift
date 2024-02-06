@@ -55,4 +55,30 @@ struct Boring: Decodable {
         where 0.0 is easy and 1.00 is hard
         """
     }
+    
+    init(activity: String, type: String, participants: Int, accessibility: Double) {
+        self.activity = activity
+        self.type = type
+        self.participants = participants
+        self.accessibility = accessibility
+    }
+    
+    init(boring: [String: Any]) {
+        activity = boring["activity"] as? String ?? ""
+        type = boring["type"] as? String ?? ""
+        participants = boring["participants"] as? Int ?? 0
+        accessibility = boring["accessibility"] as? Double ?? 0
+    }
+    
+    static func getBoring(from value: Any) -> Boring {
+        guard let boringActivity = value as? [String: Any] else {
+            return Boring(
+                activity: "NoDATA",
+                type: "NoData",
+                participants: 100,
+                accessibility: 100
+            )
+        }
+        return Boring(boring: boringActivity)
+    }
 }

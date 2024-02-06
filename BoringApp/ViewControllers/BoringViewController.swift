@@ -94,6 +94,14 @@ final class BoringViewController: UIViewController {
         
         typeVC?.delegate = self
     }
+    
+    private func showAlert(withTitle title: String, andMassage massage: String) {
+        let alert = UIAlertController(title: title, message: massage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
 
 // MARK: TypeViewControllerDelegate
@@ -120,7 +128,7 @@ private extension BoringViewController {
                     randomActivityPreset(boring)
                     print("DATA - \(boring)")
                 case .failure(let failure):
-                    print(failure)
+                    showAlert(withTitle: "Oops...", andMassage: failure.localizedDescription)
                 }
             }
         } else {
@@ -140,7 +148,7 @@ private extension BoringViewController {
                 specificTypePreset(boring)
                 print("DATA - \(boring)")
             case .failure(let failure):
-                print(failure)
+                showAlert(withTitle: "Oops...", andMassage: failure.localizedDescription)
             }
         }
     }
