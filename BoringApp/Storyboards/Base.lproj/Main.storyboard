@@ -30,6 +30,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWT-V3-vhn" userLabel="activityView" customClass="SpringView" customModule="SpringAnimation">
                                 <rect key="frame" x="40" y="120" width="240" height="150"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DTview" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-L9-V5q">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="150"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-LO-LLn">
+                                        <rect key="frame" x="15" y="15" width="210" height="120"/>
+                                        <fontDescription key="fontDescription" name="Pangolin-Regular" family="Pangolin" pointSize="24"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VN3-U2-wx4" userLabel="copiedView">
                                         <rect key="frame" x="8" y="8" width="224" height="134"/>
                                         <subviews>
@@ -70,15 +79,6 @@
                                             <constraint firstAttribute="trailing" secondItem="bvw-u0-Cgf" secondAttribute="trailing" constant="28" id="xEf-fV-lxS"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DTview" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-L9-V5q">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="150"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-LO-LLn">
-                                        <rect key="frame" x="15" y="15" width="210" height="120"/>
-                                        <fontDescription key="fontDescription" name="Pangolin-Regular" family="Pangolin" pointSize="24"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vyt-Pw-ENi">
                                         <rect key="frame" x="110" y="65" width="20" height="20"/>
                                     </activityIndicatorView>
