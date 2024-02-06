@@ -510,7 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Dp-os-8rO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352.5" y="-976.05633802816908"/>
+            <point key="canvasLocation" x="51" y="-976"/>
         </scene>
         <!--Color Collection View Controller-->
         <scene sceneID="1Jk-3B-VSg">
@@ -575,7 +575,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dkn-gB-Kc6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1395" y="-976"/>
+            <point key="canvasLocation" x="926" y="-976"/>
         </scene>
         <!--Type View Controller-->
         <scene sceneID="Qdn-9r-wcI">
@@ -659,7 +659,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAU-7w-aJK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="-2"/>
+            <point key="canvasLocation" x="51" y="-2"/>
         </scene>
     </scenes>
     <resources>
