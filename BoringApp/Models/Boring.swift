@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum BackgraundColors: String {
+    case red = "red"
+}
+
 enum Link {
     case boredURL
     case activityTypeURL
