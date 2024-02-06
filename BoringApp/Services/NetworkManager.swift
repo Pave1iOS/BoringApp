@@ -6,12 +6,7 @@
 //
 
 import Foundation
-
-enum NetworkError: Error {
-    case invalidUrl
-    case noData
-    case decodingError
-}
+import Alamofire
 
 struct NetworkManager {
     static let shared = NetworkManager()
@@ -20,25 +15,18 @@ struct NetworkManager {
     
     func fetchBoring(
         from url: URL,
-        completion: @escaping(Result<Boring, NetworkError>) -> Void
+        completion: @escaping(Result<Boring, AFError>) -> Void
     ) {
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            
-            do {
-                let boring = try JSONDecoder().decode(Boring.self, from: data)
-                
-                DispatchQueue.main.async {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let boring = Boring.getBoring(from: value)
                     completion(.success(boring))
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-            } catch {
-                completion(.failure(.decodingError))
-                print(error)
             }
-            
-        }.resume()
     }
 }

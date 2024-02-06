@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		462741552B7192A00088294E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 462741542B7192A00088294E /* Alamofire */; };
 		46ADDEC72B693C9D008678C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDEC62B693C9D008678C0 /* AppDelegate.swift */; };
 		46ADDEC92B693C9D008678C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDEC82B693C9D008678C0 /* SceneDelegate.swift */; };
 		46ADDECE2B693C9D008678C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46ADDECC2B693C9D008678C0 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46ADDF222B6E5DEB008678C0 /* SpringAnimation in Frameworks */,
+				462741552B7192A00088294E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +163,7 @@
 			name = BoringApp;
 			packageProductDependencies = (
 				46ADDF212B6E5DEB008678C0 /* SpringAnimation */,
+				462741542B7192A00088294E /* Alamofire */,
 			);
 			productName = BoringApp;
 			productReference = 46ADDEC32B693C9D008678C0 /* BoringApp.app */;
@@ -192,6 +195,7 @@
 			mainGroup = 46ADDEBA2B693C9D008678C0;
 			packageReferences = (
 				46ADDF202B6E5DEB008678C0 /* XCRemoteSwiftPackageReference "SpringAnimation" */,
+				462741532B7192A00088294E /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 46ADDEC42B693C9D008678C0 /* Products */;
 			projectDirPath = "";
@@ -459,6 +463,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		462741532B7192A00088294E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
 		46ADDF202B6E5DEB008678C0 /* XCRemoteSwiftPackageReference "SpringAnimation" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/LexDeBash/SpringAnimation";
@@ -470,6 +482,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		462741542B7192A00088294E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 462741532B7192A00088294E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		46ADDF212B6E5DEB008678C0 /* SpringAnimation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 46ADDF202B6E5DEB008678C0 /* XCRemoteSwiftPackageReference "SpringAnimation" */;
