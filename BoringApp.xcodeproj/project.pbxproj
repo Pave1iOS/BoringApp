@@ -19,7 +19,7 @@
 		46ADDF162B6C0459008678C0 /* ArchitectsDaughter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46ADDF152B6C0459008678C0 /* ArchitectsDaughter-Regular.ttf */; };
 		46ADDF182B6C1EB3008678C0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF172B6C1EB3008678C0 /* CustomTableViewCell.swift */; };
 		46ADDF1B2B6C1FB9008678C0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF1A2B6C1FB9008678C0 /* ProfileViewController.swift */; };
-		46ADDF1D2B6C308C008678C0 /* ColorCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF1C2B6C308C008678C0 /* ColorCollectionViewController.swift */; };
+		46ADDF1D2B6C308C008678C0 /* SetColorCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF1C2B6C308C008678C0 /* SetColorCollectionViewController.swift */; };
 		46ADDF1F2B6D8409008678C0 /* TypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF1E2B6D8409008678C0 /* TypeViewController.swift */; };
 		46ADDF222B6E5DEB008678C0 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 46ADDF212B6E5DEB008678C0 /* SpringAnimation */; };
 		46ADDF262B6E70F2008678C0 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADDF252B6E70F2008678C0 /* CustomCollectionViewCell.swift */; };
@@ -40,7 +40,7 @@
 		46ADDF152B6C0459008678C0 /* ArchitectsDaughter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArchitectsDaughter-Regular.ttf"; path = "../../../../../Downloads/Architects_Daughter/ArchitectsDaughter-Regular.ttf"; sourceTree = "<group>"; };
 		46ADDF172B6C1EB3008678C0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		46ADDF1A2B6C1FB9008678C0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		46ADDF1C2B6C308C008678C0 /* ColorCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewController.swift; sourceTree = "<group>"; };
+		46ADDF1C2B6C308C008678C0 /* SetColorCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetColorCollectionViewController.swift; sourceTree = "<group>"; };
 		46ADDF1E2B6D8409008678C0 /* TypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeViewController.swift; sourceTree = "<group>"; };
 		46ADDF252B6E70F2008678C0 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +94,7 @@
 				46ADDEE02B693E6E008678C0 /* BoringViewController.swift */,
 				46ADDF1E2B6D8409008678C0 /* TypeViewController.swift */,
 				46ADDF1A2B6C1FB9008678C0 /* ProfileViewController.swift */,
-				46ADDF1C2B6C308C008678C0 /* ColorCollectionViewController.swift */,
+				46ADDF1C2B6C308C008678C0 /* SetColorCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 				46ADDEDE2B693E1F008678C0 /* Boring.swift in Sources */,
 				46ADDF262B6E70F2008678C0 /* CustomCollectionViewCell.swift in Sources */,
 				46ADDEC72B693C9D008678C0 /* AppDelegate.swift in Sources */,
-				46ADDF1D2B6C308C008678C0 /* ColorCollectionViewController.swift in Sources */,
+				46ADDF1D2B6C308C008678C0 /* SetColorCollectionViewController.swift in Sources */,
 				46ADDF1F2B6D8409008678C0 /* TypeViewController.swift in Sources */,
 				46ADDF0D2B6BD4F0008678C0 /* NetworkManager.swift in Sources */,
 				46ADDEC92B693C9D008678C0 /* SceneDelegate.swift in Sources */,

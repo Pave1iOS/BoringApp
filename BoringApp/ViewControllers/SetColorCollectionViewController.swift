@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ColorCollectionViewController: UICollectionViewController {
+final class SetColorCollectionViewController: UICollectionViewController {
     
     let colors = ColorCollectionView.allCases
     var bgColor: UIColor!
