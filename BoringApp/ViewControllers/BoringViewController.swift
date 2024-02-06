@@ -10,6 +10,7 @@ import SpringAnimation
 
 protocol TypeViewControllerDelegate: AnyObject {
     func backType(_ type: String)
+    func set(background: UIColor)
 }
 
 final class BoringViewController: UIViewController {
@@ -92,6 +93,10 @@ private extension BoringViewController {
 
 // MARK: TypeViewControllerDelegate
 extension BoringViewController: TypeViewControllerDelegate {
+    func set(background: UIColor) {
+        <#code#>
+    }
+    
     func backType(_ type: String) {
         self.type = type
         fetchBoring()

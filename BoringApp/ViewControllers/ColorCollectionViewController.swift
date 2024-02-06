@@ -10,6 +10,7 @@ import UIKit
 final class ColorCollectionViewController: UICollectionViewController {
     
     let colors = ColorCollectionView.allCases
+    var bgColor: UIColor!
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,8 @@ final class ColorCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colorItem", for: indexPath) as? CustomCollectionViewCell
         let color = colors[indexPath.row]
+        
+        bgColor = UIColor(named: color.rawValue)
         
         cell?.customImageView.image = UIImage(named: color.rawValue)
         
