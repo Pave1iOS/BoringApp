@@ -329,6 +329,9 @@
                         <outletCollection property="activityIndicators" destination="ykv-T4-znW" collectionClass="NSMutableArray" id="8HB-DW-7vE"/>
                         <outletCollection property="activityIndicators" destination="vyt-Pw-ENi" collectionClass="NSMutableArray" id="8zQ-OQ-Y6S"/>
                         <outletCollection property="activityIndicators" destination="mtk-4R-Nwg" collectionClass="NSMutableArray" id="ES7-Co-SLq"/>
+                        <outletCollection property="boringViews" destination="tWT-V3-vhn" collectionClass="NSMutableArray" id="R40-fB-Eby"/>
+                        <outletCollection property="boringViews" destination="0ZN-47-Eye" collectionClass="NSMutableArray" id="F5P-nw-0Z7"/>
+                        <outletCollection property="boringViews" destination="bdz-gN-UB5" collectionClass="NSMutableArray" id="YiU-Rb-d4y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -564,6 +567,7 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="customImageView" destination="JSh-hx-kpl" id="QQF-Xf-rYZ"/>
+                                    <segue destination="fNV-hv-lJD" kind="unwind" unwindAction="unwindFor:" id="u4I-eI-hVl"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -574,6 +578,7 @@
                     </collectionView>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dkn-gB-Kc6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fNV-hv-lJD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="926" y="-976"/>
         </scene>

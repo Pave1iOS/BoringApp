@@ -16,6 +16,27 @@ enum BackgraundColors: String, CaseIterable {
     case red = "red"
     case white = "white"
     case yellow = "yellow"
+    
+    var hex: String {
+        switch self {
+        case .blue:
+            "3E85C7"
+        case .green:
+            "56B55F"
+        case .mate:
+            "00CFC3"
+        case .orange:
+            "FC9143"
+        case .purple:
+            "7C47BE"
+        case .red:
+            "DB3838"
+        case .white:
+            "FFFFFF"
+        case .yellow:
+            "EBD937"
+        }
+    }
 }
 
 enum Link {

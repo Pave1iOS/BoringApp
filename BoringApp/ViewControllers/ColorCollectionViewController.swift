@@ -14,7 +14,7 @@ class ColorCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        collectionView.allowsMultipleSelection = true
     }
 
     // MARK: UICollectionViewDataSource
@@ -31,12 +31,14 @@ class ColorCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        bgColorName = colors[indexPath.row].rawValue
-        guard let color = bgColorName else { return }
-        
-        print(color)
-        
         dismissTo(vcCount: 2, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let boringVC = segue.destination as? BoringViewController
+        guard let indexPath = collectionView.indexPathsForSelectedItems else { return }
+        
+        indexPath.forEach { boringVC?.bgColor = colors[$0.row].hex }
     }
 }
 

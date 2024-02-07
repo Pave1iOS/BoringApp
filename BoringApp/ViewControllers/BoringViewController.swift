@@ -45,13 +45,17 @@ final class BoringViewController: UIViewController {
     
     @IBOutlet weak var nextButtonView: SpringView!
     
+    @IBOutlet var boringViews: [UIView]!
+    
     // MARK: Properties
     private let networkManager = NetworkManager.shared
     private var type = "allTypes"
     
+    var bgColor: String!
+    
     // MARK: viewDidLoad
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         fetchRandomActivity()
     }
     
@@ -93,6 +97,10 @@ final class BoringViewController: UIViewController {
         let typeVC = segue.destination as? TypeViewController
         
         typeVC?.delegate = self
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        view.backgroundColor = UIColor(hex: bgColor)
     }
     
     private func showAlert(withTitle title: String, andMassage massage: String) {
