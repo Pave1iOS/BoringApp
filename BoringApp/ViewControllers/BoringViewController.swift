@@ -44,9 +44,7 @@ final class BoringViewController: UIViewController {
     @IBOutlet var activityIndicators: [UIActivityIndicatorView]!
     
     @IBOutlet weak var nextButtonView: SpringView!
-    
-    @IBOutlet var boringViews: [UIView]!
-    
+        
     // MARK: Properties
     private let networkManager = NetworkManager.shared
     private var type = "allTypes"
