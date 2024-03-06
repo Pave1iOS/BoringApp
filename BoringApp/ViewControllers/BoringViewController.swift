@@ -20,6 +20,7 @@ final class BoringViewController: UIViewController {
     
     @IBOutlet var copiedView: UIView! {
         didSet {
+            copiedView.layer.cornerRadius = 20
             copiedView.isHidden = true
         }
     }
@@ -27,6 +28,7 @@ final class BoringViewController: UIViewController {
     @IBOutlet weak var textCopiedButton: UIButton! {
         didSet {
             textCopiedButton.backgroundColor = .white
+            textCopiedButton.layer.cornerRadius = 20
         }
     }
     
