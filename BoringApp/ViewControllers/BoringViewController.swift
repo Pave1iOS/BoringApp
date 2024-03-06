@@ -24,6 +24,13 @@ final class BoringViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var textCopiedButton: UIButton! {
+        didSet {
+            textCopiedButton.backgroundColor = .white
+        }
+    }
+    
+    
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var selectedTypeLabel: UIImageView! {
         didSet {
