@@ -1,0 +1,6 @@
+![Simulator Screenshot - iPhone 15 Pro - 2024-04-01 at 02 13 45](https://github.com/Pave1iOS/BoringApp/assets/149584590/7aaad27b-17ea-4de8-b3a7-e1040604ee93)
+![Simulator Screenshot - iPhone 15 Pro - 2024-04-01 at 02 13 26](https://github.com/Pave1iOS/BoringApp/assets/149584590/04a1eb2d-52f9-4a8b-80aa-4adaf806f05e)
+![Simulator Screenshot - iPhone 15 Pro - 2024-04-01 at 02 13 36](https://github.com/Pave1iOS/BoringApp/assets/149584590/12a5a5f5-e2fe-41c2-81f6-35f623f6f7fe)
+![Simulator Screenshot - iPhone 15 Pro - 2024-04-01 at 02 13 45](https://github.com/Pave1iOS/BoringApp/assets/149584590/b6a74120-a616-49ab-b325-2549876476de)
+![Simulator Screenshot - iPhone 15 Pro - 2024-04-01 at 02 13 59](https://github.com/Pave1iOS/BoringApp/assets/149584590/a42a2106-0215-4316-9330-560a0de3d24f)
+![Simulator Screenshot - iPhone 15 Pro - 2024-04-01 at 02 14 03](https://github.com/Pave1iOS/BoringApp/assets/149584590/57d0b76d-c25a-4725-9aec-f87c4087260a)
